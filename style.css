@@ -259,6 +259,157 @@ button {
   color: var(--color-gray-600);
 }
 
+/* ---------- PRICING ---------- */
+.pricing {
+  padding: var(--section-padding);
+  background-color: var(--color-bg-soft);
+}
+
+.pricing__subtitle {
+  text-align: center;
+  color: var(--color-gray-600);
+  margin-top: -32px;
+  margin-bottom: 56px;
+  font-size: 1rem;
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.price-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 10px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card__label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gray-600);
+  margin-bottom: 12px;
+}
+
+.price-card__amount {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.price-card__amount span {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-gray-600);
+  margin-top: 4px;
+}
+
+.price-card__features {
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: 20px;
+  margin-bottom: 28px;
+  flex: 1;
+}
+
+.price-card__features li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.92rem;
+  color: var(--color-ink);
+  margin-bottom: 14px;
+}
+
+.price-card__features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: 1px solid var(--color-gray-200);
+  color: var(--color-ink);
+  text-align: center;
+}
+
+.btn--outline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Pro plan highlight */
+.price-card--highlight {
+  background-color: var(--color-navy);
+  color: #ffffff;
+  border-color: var(--color-navy);
+  transform: scale(1.03);
+}
+
+.price-card--highlight .price-card__label,
+.price-card--highlight .price-card__amount span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.price-card--highlight .price-card__features {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+.price-card--highlight .price-card__features li {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.price-card__badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* ---------- RESPONSIVE: PRICING ---------- */
+@media (max-width: 1024px) {
+  .pricing__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card--highlight {
+    transform: none;
+    order: -1;
+  }
+
+  .pricing__subtitle {
+    margin-top: -24px;
+  }
+}
+
 /* ---------- RESPONSIVE: SPEAKERS ---------- */
 @media (max-width: 768px) {
   .speakers__grid {
