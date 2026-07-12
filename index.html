@@ -1,34 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DevConf 2026 — Code. Connect. Create</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevConf 2026 — Code. Connect. Create</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar__inner">
+        <a href="#" class="navbar__logo" aria-label="DevConf 2026 home">
+          <img src="assets/logo-mini.png" alt="DevConf 2026 logo" class="navbar__logo-icon" />
+          <span class="navbar__logo-text">DEVCONF<br />2026</span>
+        </a>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-    <div class="navbar__inner">
-      <a href="#" class="navbar__logo">
-        <img src="./images/logo-mini.png" alt="" class="navbar__logo-icon" />
-        <span class="navbar__logo-text">DEVCONF<br />2026</span>
-      </a>
+        <nav class="navbar__nav" aria-label="Main navigation">
+          <ul class="navbar__menu">
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#tracks">Tracks</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </nav>
 
-      <nav class="navbar__nav" aria-label="Main navigation">
-        <ul class="navbar__menu">
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#tracks">Tracks</a></li>
-          <li><a href="#venue">Venue</a></li>
-          <li><a href="#blog">Blog</a></li>
-        </ul>
-      </nav>
+        <a href="#register" class="btn btn--primary navbar__cta">Register Now</a>
+      </div>
+    </header>
 
-      <a href="#register" class="btn btn--primary navbar__cta">Register Now</a>
-    </div>
-  </header>
+    <main>
+      <section class="hero" id="register">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">October 15–17 • Seattle, WA</p>
+          <h1 class="hero__heading">Code. <em>Connect</em>. Create</h1>
+          <p class="hero__subtext">
+            Experience three days of forward-looking talks, practical product demos,
+            and high-energy networking designed for ambitious developers and teams.
+          </p>
+          <a href="#pricing" class="btn btn--primary hero__cta">Reserve Your Seat</a>
+        </div>
+      </section>
 
-</body>
+      <section class="speakers" id="speakers">
+        <div class="container">
+          <h2 class="section-heading">Meet the Speakers</h2>
+          <div class="speakers__grid">
+            <article class="speaker-card">
+              <img class="speaker-card__image" src="./images/speaker-1.svg" alt="Portrait illustration of Maya Chen" />
+              <div class="speaker-card__body">
+                <span class="speaker-card__category">AI/ML</span>
+                <h3 class="speaker-card__name">Maya Chen</h3>
+                <p class="speaker-card__role">VP of AI Platforms, Northstar Labs</p>
+              </div>
+            </article>
+
+            <article class="speaker-card">
+              <img class="speaker-card__image" src="./images/speaker-2.svg" alt="Portrait illustration of Daniel Brooks" />
+              <div class="speaker-card__body">
+                <span class="speaker-card__category">Cloud &amp; DevOps</span>
+                <h3 class="speaker-card__name">Daniel Brooks</h3>
+                <p class="speaker-card__role">Principal Engineer, Orbit Cloud</p>
+              </div>
+            </article>
+
+            <article class="speaker-card">
+              <img class="speaker-card__image" src="./images/speaker-3.svg" alt="Portrait illustration of Sofia Alvarez" />
+              <div class="speaker-card__body">
+                <span class="speaker-card__category">Frontend</span>
+                <h3 class="speaker-card__name">Sofia Alvarez</h3>
+                <p class="speaker-card__role">Design Systems Lead, Layer Studio</p>
+              </div>
+            </article>
+
+            <article class="speaker-card">
+              <img class="speaker-card__image" src="./images/speaker-4.svg" alt="Portrait illustration of Evan Patel" />
+              <div class="speaker-card__body">
+                <span class="speaker-card__category">Security</span>
+                <h3 class="speaker-card__name">Evan Patel</h3>
+                <p class="speaker-card__role">Head of Platform Security, Beacon Forge</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <div class="container">
+          <div class="pricing__intro">
+            <p class="section-label">Conference Access</p>
+            <h2 class="section-heading section-heading--light">Secure Your Spot</h2>
+            <p class="pricing__subtitle">
+              Choose the pass that fits your learning goals, team ambitions, and preferred level of access.
+            </p>
+          </div>
+
+          <div class="pricing__cards">
+            <article class="pricing-card">
+              <h3 class="pricing-card__name">Standard</h3>
+              <p class="pricing-card__price">$199</p>
+              <ul class="pricing-card__features">
+                <li>Conference access</li>
+                <li>Workshop sessions</li>
+                <li>Networking events</li>
+              </ul>
+              <a href="#register" class="btn btn--secondary">Get Standard</a>
+            </article>
+
+            <article class="pricing-card pricing-card--featured">
+              <span class="pricing-card__badge">Most Popular</span>
+              <h3 class="pricing-card__name">Pro</h3>
+              <p class="pricing-card__price">$349</p>
+              <ul class="pricing-card__features">
+                <li>Everything in Standard</li>
+                <li>VIP lounge access</li>
+                <li>Speaker roundtables</li>
+              </ul>
+              <a href="#register" class="btn btn--primary">Choose Pro</a>
+            </article>
+
+            <article class="pricing-card">
+              <h3 class="pricing-card__name">Team</h3>
+              <p class="pricing-card__price">$899</p>
+              <ul class="pricing-card__features">
+                <li>Conference access for 4</li>
+                <li>Team collaboration sessions</li>
+                <li>Private community lounge</li>
+              </ul>
+              <a href="#register" class="btn btn--secondary">Book Team</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="hackathon" id="tracks">
+        <div class="container hackathon__inner">
+          <div class="hackathon__content">
+            <p class="section-label">24-Hour Global Hackathon</p>
+            <h2 class="section-heading section-heading--left">Build Boldly With the Community</h2>
+            <p class="hackathon__text">
+              Launch a prototype in one weekend, pitch it live on stage, and connect with mentors from leading product teams.
+            </p>
+            <a href="#register" class="btn btn--primary">Join the Challenge</a>
+          </div>
+
+          <div class="hackathon__highlights">
+            <article class="highlight-card">
+              <h3>Fast-track mentorship</h3>
+              <p>Guidance from engineering leaders and startup founders.</p>
+            </article>
+            <article class="highlight-card">
+              <h3>Live judging</h3>
+              <p>Present to a panel of industry experts and win prizes.</p>
+            </article>
+            <article class="highlight-card">
+              <h3>Global teams</h3>
+              <p>Collaborate across time zones with builders from around the world.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="blog">
+      <div class="container footer__inner">
+        <a href="#" class="footer__brand">
+          <img src="./images/logo.svg" alt="DevConf 2026 logo" class="footer__brand-icon" />
+          <span>DevConf 2026</span>
+        </a>
+
+        <div class="footer__social" aria-label="Social links">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="X">x</a>
+          <a href="#" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+      <div class="container">
+        <hr class="footer__divider" />
+        <p class="footer__copyright">© 2026 DevConf. Built for developers worldwide.</p>
+      </div>
+    </footer>
+  </body>
 </html>
